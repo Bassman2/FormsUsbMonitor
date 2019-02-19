@@ -32,8 +32,7 @@ namespace UsbMonitor
             bool handled = false;
             //if (m.HWnd == this.windowHandle)
             {
-                //HwndHandler(m.HWnd, m.Msg, m.WParam, m.LParam, ref handled);
-                DeviceChangeManager.HwndHandler(this, m.HWnd, m.Msg, m.WParam, m.LParam, ref handled);
+                DeviceChangeManager.HwndHandler(this, m.HWnd, m.Msg, m.WParam, m.LParam);
             }
             return false;
         }
