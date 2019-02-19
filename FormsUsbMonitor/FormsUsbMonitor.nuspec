@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Ralf Beckers</authors>
+    <owners>Ralf Beckers</owners>
+	<projectUrl>https://github.com/Bassman2/WpfUsbMonitor</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>WPF implementation of a USB monitor to signal if a USB device is plugged in or out. This implementation if Forms free and can also be used by MVVM. Documentation included.</description>
+    <releaseNotes>Creation.</releaseNotes>
+    <copyright>Copyright Ralf Beckers 2017</copyright>
+    <tags>WPF USB Monitor MVVM</tags>
+	<dependencies>
+      <group targetFramework=".NETFramework4.5" />
+	</dependencies>
+  </metadata>
+  <files>
+    <file src="WpfUsbMonitorLicense.txt" target="content" />
+    <file src="..\WpfUsbMonitorDocumentation\Help\WpfUsbMonitor.chm" target="content" />
+  </files>
+</package>
