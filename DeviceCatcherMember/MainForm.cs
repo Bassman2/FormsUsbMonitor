@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using UsbMonitor;
 
 namespace DeviceCatcherMember
@@ -31,6 +23,13 @@ namespace DeviceCatcherMember
         private void OnUsb(object sender, UsbEventArgs e)
         {
             this.textBox.Text += e.ToString() + "\r\n";
+        }
+
+        [System.Security.Permissions.PermissionSet(System.Security.Permissions.SecurityAction.Demand, Name = "FullTrust")]
+        protected override void WndProc(ref Message m)
+        {
+            this.usbMonitor?.HwndHandler(ref m);
+            base.WndProc(ref m);
         }
     }
 }

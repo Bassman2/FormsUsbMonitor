@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace UsbMonitor
 {
     /// <summary>
     /// USB Monitor class to notify if the USB content changes
     /// </summary>
-    public partial class UsbMonitorManager : IMessageFilter, IUsbMonitorEvents
+    public partial class UsbMonitorManager : IUsbMonitorEvents //, IMessageFilter
     {
         /// <summary>
         /// Constructor
@@ -20,21 +15,30 @@ namespace UsbMonitor
         public UsbMonitorManager(Form form, bool start = true)
         {
             this.windowHandle = form.Handle;
-            Application.AddMessageFilter(this);
+            // AddMessageFilter does not work for WM_DEVICECHANGE
+            //Application.AddMessageFilter(this);
             if (start)
             {
                 Start();
             }
         }
 
-        public bool PreFilterMessage(ref Message m)
+        //public bool PreFilterMessage(ref Message m)
+        //{
+        //    if (m.HWnd == this.windowHandle)
+        //    {
+        //        DeviceChangeManager.HwndHandler(this, m.HWnd, m.Msg, m.WParam, m.LParam);
+        //    }
+        //    return false;
+        //}
+
+        /// <summary>
+        /// Message handler
+        /// </summary>
+        /// <param name="m">Message parameter</param>
+        public void HwndHandler(ref Message m)
         {
-            bool handled = false;
-            //if (m.HWnd == this.windowHandle)
-            {
-                DeviceChangeManager.HwndHandler(this, m.HWnd, m.Msg, m.WParam, m.LParam);
-            }
-            return false;
+            DeviceChangeManager.HwndHandler(this, m.HWnd, m.Msg, m.WParam, m.LParam);
         }
     }
 }

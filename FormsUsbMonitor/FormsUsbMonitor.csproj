@@ -30,6 +30,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\FormsUsbMonitor.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -65,6 +66,7 @@
     <Compile Include="UsbMonitor\UsbEventPortArgs.cs" />
     <Compile Include="UsbMonitor\UsbEventVolumeArgs.cs" />
     <Compile Include="UsbMonitor\UsbMonitorManager.cs" />
+    <Compile Include="UsbMonitor\UsbVolumeFlags.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
