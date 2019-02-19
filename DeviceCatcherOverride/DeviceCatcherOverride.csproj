@@ -81,7 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FormsUsbMonitor\FormsUsbMonitor.csproj">
-      <Project>{64f9fa98-b57c-4ae0-9c31-a72f74fc2d51}</Project>
+      <Project>{13347870-a28f-4965-82af-9900536e1274}</Project>
       <Name>FormsUsbMonitor</Name>
     </ProjectReference>
   </ItemGroup>

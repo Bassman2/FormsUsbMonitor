@@ -13,42 +13,24 @@ namespace DeviceCatcherMember
 {
     public partial class MainForm : UsbMonitorForm
     {
+        private UsbMonitorManager usbMonitor;
+
         public MainForm()
         {
             InitializeComponent();
+
+            this.usbMonitor = new UsbMonitorManager(this);
+            this.usbMonitor.UsbOem += OnUsb;
+            this.usbMonitor.UsbVolume += OnUsb;
+            this.usbMonitor.UsbPort += OnUsb;
+            this.usbMonitor.UsbDeviceInterface += OnUsb;
+            this.usbMonitor.UsbHandle += OnUsb;
+            this.usbMonitor.UsbChanged += OnUsb;
         }
 
-        public override void OnUsbOem(UsbEventOemArgs args)
+        private void OnUsb(object sender, UsbEventArgs e)
         {
-            this.textBox.Text += args.ToString() + "\r\n";
-        }
-
-        public override void OnUsbVolume(UsbEventVolumeArgs args)
-        {
-            this.textBox.Text += args.ToString() + "\r\n";
-        }
-
-        public override void OnUsbPort(UsbEventPortArgs args)
-        {
-            this.textBox.Text += args.ToString() + "\r\n";
-        }
-
-        public override void OnUsbInterface(UsbEventDeviceInterfaceArgs args)
-        {
-            this.textBox.Text += args.ToString() + "\r\n";
-        }
-
-        public override void OnUsbHandle(UsbEventHandleArgs args)
-        {
-            this.textBox.Text += args.ToString() + "\r\n";
-        }
-
-        /// <summary>
-        /// Override to handle USB changed notification.
-        /// </summary>
-        public override void OnUsbChanged(UsbEventArgs args)
-        {
-            this.textBox.Text += args.ToString() + "\r\n";
+            this.textBox.Text += e.ToString() + "\r\n";
         }
     }
 }

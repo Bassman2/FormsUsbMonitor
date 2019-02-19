@@ -28,15 +28,10 @@ namespace UsbMonitor
 
         public event EventHandler<UsbEventArgs> UsbChanged;
 
-        //public UsbMonitorForm()
-        //{
-        //    InitializeComponent();
-
-        //    //if (this.UsbNotification)
-        //    //{
-        //    //    Start();
-        //    //}
-        //}
+        public UsbMonitorForm()
+        {
+            Start();
+        }
 
         /// <summary>
         /// Override to handle USB interface notification.
