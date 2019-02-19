@@ -11,7 +11,7 @@ using UsbMonitor;
 
 namespace DeviceCatcherMember
 {
-    public partial class MainForm : UsbMonitorForm
+    public partial class MainForm : Form
     {
         private UsbMonitorManager usbMonitor;
 

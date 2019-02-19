@@ -10,7 +10,7 @@ namespace UsbMonitor
     /// <summary>
     /// USB Monitor class to notify if the USB content changes
     /// </summary>
-    public partial class UsbMonitorManager : IMessageFilter
+    public partial class UsbMonitorManager : IMessageFilter, IUsbMonitorEvents
     {
         /// <summary>
         /// Constructor
@@ -30,9 +30,10 @@ namespace UsbMonitor
         public bool PreFilterMessage(ref Message m)
         {
             bool handled = false;
-            if (m.HWnd == this.windowHandle)
+            //if (m.HWnd == this.windowHandle)
             {
-                HwndHandler(m.HWnd, m.Msg, m.WParam, m.LParam, ref handled);
+                //HwndHandler(m.HWnd, m.Msg, m.WParam, m.LParam, ref handled);
+                DeviceChangeManager.HwndHandler(this, m.HWnd, m.Msg, m.WParam, m.LParam, ref handled);
             }
             return false;
         }
