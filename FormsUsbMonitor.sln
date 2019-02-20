@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "FormsUsbMonitorDocumentation", "FormsUsbMonitorDocumentation\FormsUsbMonitorDocumentation.shfbproj", "{505B0644-89B7-424D-88BE-9949C6D6FF9A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceCatcherMember", "DeviceCatcherMember\DeviceCatcherMember.csproj", "{955B0715-33F6-4007-B3AC-44E7D706599C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceCatcherEvent", "DeviceCatcherEvent\DeviceCatcherEvent.csproj", "{CDCA91FA-1944-4C6E-AF9E-3F0F3689E47E}"
@@ -13,15 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceCatcherOverride", "De
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormsUsbMonitor", "FormsUsbMonitor\FormsUsbMonitor.csproj", "{13347870-A28F-4965-82AF-9900536E1274}"
 EndProject
+Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "FormsUsbMonitorDocumentation", "FormsUsbMonitorDocumentation\FormsUsbMonitorDocumentation.shfbproj", "{C4F78FBA-4939-4782-8883-79216AAD99FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{505B0644-89B7-424D-88BE-9949C6D6FF9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{505B0644-89B7-424D-88BE-9949C6D6FF9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{505B0644-89B7-424D-88BE-9949C6D6FF9A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{955B0715-33F6-4007-B3AC-44E7D706599C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{955B0715-33F6-4007-B3AC-44E7D706599C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{955B0715-33F6-4007-B3AC-44E7D706599C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -38,6 +35,9 @@ Global
 		{13347870-A28F-4965-82AF-9900536E1274}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13347870-A28F-4965-82AF-9900536E1274}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13347870-A28F-4965-82AF-9900536E1274}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4F78FBA-4939-4782-8883-79216AAD99FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4F78FBA-4939-4782-8883-79216AAD99FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4F78FBA-4939-4782-8883-79216AAD99FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
